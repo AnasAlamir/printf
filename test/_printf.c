@@ -34,6 +34,11 @@ int _printf(const char *format, ...)
 			c += printf("%%");
 			i++;
 		}
+		else if (format[i] == '%' && (format[i + 1] == 'i' || format[i + 1] == 'd'))
+		{
+			c += printf("%d", va_arg(arg, int));
+			i++;
+		}
 		else
 			c += printf("%c", format[i]);
 	}
