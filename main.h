@@ -115,7 +115,6 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 /*********anas*****/
-int _printf(const char *format, ...);
 int print_c(char a, int *i);
 int print_s(char *a, int *i);
 int print_i(int a, int *i);
