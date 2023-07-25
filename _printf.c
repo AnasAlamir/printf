@@ -38,6 +38,8 @@ int _printf(const char *format, ...)
 			c += print_X(va_arg(arg, int), &i);
 		else if (format[i + 1] == 'u')
 			c += print_i(va_arg(arg, unsigned int), &i);
+		else if (format[i + 1] == 'b')
+		c += print_bi(va_arg(arg,int), &i);
 		}
 		else
 			c += printf("%c", format[i]);
