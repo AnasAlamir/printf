@@ -28,16 +28,14 @@ int _printf(const char *format, ...)
 			c += printf("%%");
 			i++;
 		}
-
 		else if (format[i + 1] == 'i')
 			c += print_i(va_arg(arg, int), &i);
         	else if ((format[i + 1] == 'o')
 			c += print_o(va_arg(arg, int), &i);
-		else if ((format[i + 1] == 'x')
-			c += print_(va_arg(arg, int), &i);
-		else if ((format[i + 1] == 'X')
+		else if (format[i + 1] == 'x')
+			c += print_x(va_arg(arg, int), &i);
+		else if (format[i + 1] == 'X')
 			c += print_X(va_arg(arg, int), &i);
-
 		else if (format[i + 1] == 'u')
 			c += print_i(va_arg(arg, unsigned int), &i);
 		}
