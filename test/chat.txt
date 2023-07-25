@@ -1,0 +1,54 @@
+int print_c(char a, int *i)
+{
+    printf("%c", a);
+    (*i)++;
+    return (1);
+}
+
+int print_s(char *a, int *i)
+{
+    if (a == NULL)
+    {
+        printf("(null)");
+        (*i) += 6;
+        return (0);
+    }
+    printf("%s", a);
+    (*i) += strlen(a);
+    return (1);
+}
+
+int print_i(int a, int *i)
+{
+    printf("%d", a);
+    (*i)++;
+    return (1);
+}
+
+int print_u(unsigned int a, int *i)
+{
+    printf("%u", a);
+    (*i)++;
+    return (1);
+}
+
+int print_x(int a, int *i)
+{
+    printf("%x", a);
+    (*i)++;
+    return (1);
+}
+
+int print_X(int a, int *i)
+{
+    printf("%X", a);
+    (*i)++;
+    return (1);
+}
+
+int print_o(int a, int *i)
+{
+    printf("%o", a);
+    (*i)++;
+    return (1);
+}
