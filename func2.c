@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * print_x - hexadecimal format (lowercase).
  *
@@ -36,7 +37,15 @@ int print_X(int a, int *i)
  */
 int print_b(int a, int *i)
 {
-	printf("%b", a);
+	int j, b[32],c = 0;
+
+	for (j = 0; a; j++)
+	{
+		b[c++] = a % 2;
+		a /= 2;
+	}
+	for (j = c - 1; j >= 0; j--)
+		printf ("%d", b[j]);
 	(*i)++;
 	return (1);
 }
