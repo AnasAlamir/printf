@@ -3,7 +3,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
-#include <limits.h>
+
 int _printf(const char *format, ...);
 int print_c(char a, int *i);
 int print_s(char *a, int *i);

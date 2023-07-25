@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			c += printf("%%");
 			i++;
 		}
-		else if (format[i + 1] == 'i' || format[i + 1] == 'd')
+		else if (format[i + 1] == 'i')
 			c += print_i(va_arg(arg, int), &i);
         	else if (format[i + 1] == 'o')
 			c += print_o(va_arg(arg, int), &i);
@@ -37,9 +37,9 @@ int _printf(const char *format, ...)
 		else if (format[i + 1] == 'X')
 			c += print_X(va_arg(arg, int), &i);
 		else if (format[i + 1] == 'u')
-			c += print_u(va_arg(arg, unsigned int), &i);
+			c += print_i(va_arg(arg, unsigned int), &i);
 		else if (format[i + 1] == 'b')
-			c += print_b(va_arg(arg,int), &i);
+		c += print_b(va_arg(arg,int), &i);
 		}
 		else
 			c += printf("%c", format[i]);
